@@ -1,0 +1,65 @@
+body {
+    /* text-align:center; */
+    /* width:200px; */ 
+    width: auto; 
+    height: auto;
+    background-image: url('saul.jpeg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+/* button {
+    width:100%;
+    color:white;
+    background:linear-gradient(#01a9e1, #5bc4bc);
+    border-width:0px;
+    border-radius:20px;
+    padding:5px;
+    font-weight: bold;
+    cursor:pointer;
+} */
+
+
+#grabBtn {
+	background-color: #55a630;
+	border: none;
+	border-radius: 50px;
+	width: 10rem;
+	position: relative;
+	overflow: hidden;
+	transition: transform 500ms ease;
+}
+
+#grabBtn::before {
+	content: "";
+	background-color: #7c38d8;
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: width 500ms ease;
+}
+
+#grabBtn::after {
+	content: "";
+	background-image: url("https://cdn-icons-png.flaticon.com/24/2767/2767192.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 0%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: width 500ms ease;
+}
+
+#grabBtn:hover:before,
+#grabBtn:hover:after {
+	width: 100%;
+}
+
+#grabBtn:active {
+	transform: scale(0.9);
+}
